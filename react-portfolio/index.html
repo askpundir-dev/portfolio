@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Vite + React</title>
+    
+
+    <script>
+      // Set background color instantly to prevent white flash
+      (function () {
+        var theme = window.localStorage.getItem("darkMode");
+        var style = document.createElement("style");
+        if (theme === "true") {
+          style.innerHTML =
+            "body { background-color: #121212 !important; color: #fff !important; }";
+        } else {
+          style.innerHTML =
+            "body { background-color: #fff !important; color: #000 !important; }";
+        }
+        document.head.appendChild(style);
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

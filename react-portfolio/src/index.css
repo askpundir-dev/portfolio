@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+body{
+  font-family: "Poppins", sans-serif;
+  background-color: white;
+  color: black;
+   transition:background-color 0.5s, color 0.5s;
+}
+
+body.darkMode{
+  background-color: #121212;
+  color: #ffffff;
+  transition:background-color 0.5s, color 0.5s;
+}
+
+

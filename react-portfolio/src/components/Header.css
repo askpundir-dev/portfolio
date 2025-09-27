@@ -1,0 +1,14 @@
+/* Header.css */
+@import "tailwindcss";
+
+@layer components {
+  .nameLogo {
+    @apply h-[45px] w-auto px-3 cursor-pointer border border-transparent hover:border-white rounded-[4px];
+  }
+
+  .icon {
+    @apply h-10 w-10 py-2 cursor-pointer border border-transparent hover:border-white rounded-[4px];
+  }
+}
+
+
