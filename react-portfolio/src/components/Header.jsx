@@ -9,14 +9,14 @@ import "./Header.css";
 
 export default function Header() {
   const { isDarkMode, setIsDarkMode } = useDaRkModeContext();
-  
+
   const toggleDarkMode = () => setIsDarkMode((prev) => !prev);
 
   return (
     <header
-      className={`flex justify-around items-center  py-3 gap-x-20 text-white ${
-        isDarkMode ? "" : "bg-red-800"
-      }`}
+      className={`flex justify-around items-center  py-3 gap-x-20  
+        ${isDarkMode ? "text-red-500" : "text-white"} 
+      ${isDarkMode ? "" : "bg-red-800"}`}
     >
       <Link to="/">
         <NameLogo className="nameLogo" />
