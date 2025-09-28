@@ -14,14 +14,14 @@ export default function Header() {
 
   return (
     <header
-      className={`flex justify-around items-center  py-3 gap-x-20  
+      className={`flex h-[10vh] justify-around items-center  py-3 gap-x-20  
         ${isDarkMode ? "text-red-500" : "text-white"} 
       ${isDarkMode ? "" : "bg-red-800"}`}
     >
-      <Link to="/">
+      <a href="/">
         <NameLogo className="nameLogo" />
-      </Link>
-      <div className="flex gap-3">
+      </a>
+      <div className="flex gap-3" title='Toggle Theme'>
         {!isDarkMode && (
           <DarkModeIcon className="icon" onClick={toggleDarkMode} />
         )}

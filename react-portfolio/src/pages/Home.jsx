@@ -5,15 +5,22 @@ import EmailLogo from "../assets/icons/email.svg?react";
 import NameLogo from "../assets/images/name-logo.svg?react";
 import "./Home.css";
 import { useDaRkModeContext } from "../context-provider/context";
+import { useEffect, useState } from "react";
+import Popup from "./Popup";
 
 //Home.jsx
 export default function Home() {
   const { isDarkMode } = useDaRkModeContext();
+  const [showPopup, setShowPopup] = useState(false);
+  useEffect(() => {
+    if (showPopup) document.body.onscroll = () => setShowPopup(false);
+  }, [showPopup]);
+  const mailLink = "mailto:ask.pundir0224@gmail.com";
   return (
     <>
       <Header />
-      <div className="flex justify-between items-center h-[70vh] px-7 my-4">
-        <div></div>
+      <div className="flex justify-between items-center h-[80vh] px-7 py-2">
+        <div>{""}</div>
         <div className="flex items-center w-[600px] h-auto relative">
           <div className="flex flex-col gap-4 absolute left-[-0.4rem] items-start md:sm:left-[-3rem] lg:left-[-8rem]">
             <h1 className="text-[1.8rem] lg:text-[2.1rem] font-semibold w-max font-mono">
@@ -25,7 +32,7 @@ export default function Home() {
             <button
               className="topSectionBtn"
               onClick={() => {
-                console.log("eww bro");
+                setShowPopup(true);
               }}
             >
               About Me
@@ -65,7 +72,7 @@ export default function Home() {
             </a>
           </li>
           <li title="mail">
-            <a href="mailto:ask.pundir0224@gmail.com">
+            <a href={mailLink}>
               <EmailLogo
                 className={`w-4 ${
                   isDarkMode ? "hover:text-white" : "hover:text-black"
@@ -76,21 +83,28 @@ export default function Home() {
           <li></li>
         </ul>
       </div>
-      <button
-        className="topSectionBtn mx-auto mt-3 block relative group"
-        onClick={() => {
-          console.log("eww bro");
-        }}
-      >
-        Latest Works
-        <img
-          src="/src/assets/images/downarrow.png"
-          alt="down-arrow"
-          className={`absolute top-9 left-2/6 w-11 md:group-hover:translate-y-4 transition-all duration-400 ease-in-out ${
-            isDarkMode && "invert"
-          } `}
-        />
-      </button>
+
+      <div className="w-full h-[10vh]">
+        <button
+          className="topSectionBtn mx-auto -mt-6 block relative group"
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo(0, 694);
+            console.log("eww bro");
+          }}
+        >
+          Latest Works
+          <img
+            src="/src/assets/images/downarrow.png"
+            alt="down-arrow"
+            className={`absolute top-9 left-2/6 w-11 group-hover:translate-y-2 transition-all duration-400 ease-in-out ${
+              isDarkMode && "invert"
+            } `}
+          />
+        </button>
+      </div>
+
+      {showPopup && <Popup onClose={() => setShowPopup(false)} />}
     </>
   );
 }
