@@ -222,6 +222,7 @@ export function initMatter() {
   if (!container) {
     return;
   }
+  container.innerHTML = ""; // Clear previous canvas if any
   let m = runMatter(container);
   setWindowSize(m);
   window.addEventListener("resize", () => setWindowSize(m));

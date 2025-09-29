@@ -20,16 +20,16 @@ export default function Home() {
   useEffect(() => {
     initMatter();
   }, []);
-  const mailLink = "mailto:ask.pundir0224@gmail.com";
+  const mailLink = import.meta.env.VITE_GMAIL_URL;
   return (
     <>
       <Header />
-     <div id="wrapper-canvas"></div>
+     <div id="wrapper-canvas" className="w-full top-0 left-0 h-100vh absolute  overflow-hidden -z-999"></div>
       <div className="flex justify-between items-center h-[80vh] px-7 py-2">
         <div>{""}</div>
         <div className="flex items-center w-[600px] h-auto relative">
           <div className="flex flex-col gap-4 absolute left-[-0.4rem] items-start md:sm:left-[-3rem] lg:left-[-8rem]">
-            <h1 className="text-[1.8rem] lg:text-[2.1rem] font-semibold w-max font-mono">
+            <h1 className="text-[1.8rem] lg:text-[2.1rem] font-semibold w-max font-mono pointer-events-none">
               Abhishek Pundir
             </h1>
             <p className="font-sans">
@@ -44,7 +44,7 @@ export default function Home() {
               About Me
             </button>
           </div>
-          <NameLogo style={{ width: "100%", height: "auto" }} />
+          <NameLogo style={{ width: "100%", height: "auto" }} className='pointer-events-none' />
         </div>
         <ul
           className={`flex flex-col gap-5 ${
