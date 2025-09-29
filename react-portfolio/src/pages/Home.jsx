@@ -1,4 +1,5 @@
 import Header from "../components/Header";
+import { initMatter } from "../animation/matter";
 import LinkedInLogo from "../assets/icons/linkedin.svg?react";
 import GitHubLogo from "../assets/icons/github.svg?react";
 import EmailLogo from "../assets/icons/email.svg?react";
@@ -15,10 +16,15 @@ export default function Home() {
   useEffect(() => {
     if (showPopup) document.body.onscroll = () => setShowPopup(false);
   }, [showPopup]);
+
+  useEffect(() => {
+    initMatter();
+  }, []);
   const mailLink = "mailto:ask.pundir0224@gmail.com";
   return (
     <>
       <Header />
+     <div id="wrapper-canvas"></div>
       <div className="flex justify-between items-center h-[80vh] px-7 py-2">
         <div>{""}</div>
         <div className="flex items-center w-[600px] h-auto relative">
@@ -80,7 +86,6 @@ export default function Home() {
               />
             </a>
           </li>
-          <li></li>
         </ul>
       </div>
 

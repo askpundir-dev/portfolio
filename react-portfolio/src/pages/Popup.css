@@ -1,0 +1,61 @@
+/* popup open effect */
+.popupEffects {
+  animation: smooth-appearance forwards 350ms ease-in-out;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes smooth-appearance {
+  0% {
+    transform: translate(-50%, -54%) scale(0.98);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+/* popup close effect */
+.popupClosingEffect {
+  animation: smooth-disappearance forwards 350ms ease-in-out;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes smooth-disappearance {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -54%) scale(0.98);
+    opacity: 0;
+  }
+}
+
+
+/* backdrop effects */
+.backdropEffects {
+  animation: backdrop-appearance 350ms ease-in-out forwards;
+}
+
+.backdropClosingEffect {
+  animation: backdrop-disappearance 350ms ease-in-out forwards;
+}
+
+@keyframes backdrop-appearance {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes backdrop-disappearance {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
