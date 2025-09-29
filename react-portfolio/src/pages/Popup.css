@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 /* popup open effect */
 .popupEffects {
   animation: smooth-appearance forwards 350ms ease-in-out;
@@ -57,4 +59,19 @@
   to {
     opacity: 0;
   }
+}
+
+/* related to popup skill section */
+@layer components {
+  .skillStyles {
+    @apply border border-[#383737] px-[11px] py-[7px] rounded-[999px];
+  }
+}
+
+.skillStylesLIghtMode{
+  box-shadow: -1px 0px 2px 1px gray;
+}
+
+.popup-content-container {
+  scrollbar-width: none;
 }
