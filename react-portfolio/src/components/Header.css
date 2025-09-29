@@ -3,11 +3,14 @@
 
 @layer components {
   .nameLogo {
-    @apply h-[45px] w-auto px-3 cursor-pointer border border-transparent hover:border-white rounded-[4px];
+    @apply h-[45px] w-auto px-3;
   }
 
   .icon {
-    @apply h-10 w-10 py-2 cursor-pointer border border-transparent hover:border-white rounded-[4px];
+    @apply cursor-pointer border border-transparent rounded-[4px] transition-[border] duration-350 delay-0 ease-in-out;
+  }
+  .iconSize{
+    @apply h-10 w-10 py-2;
   }
 }
 
