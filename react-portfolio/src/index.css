@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 body {
-  font-family: poppins, sans-serif;
+  font-family: Roboto, Arial;
+  /* font-family:poppins, Arial, sans-serif; */
   background-color: white;
   color: black;
   transition: background-color 0.5s, color 0.5s;

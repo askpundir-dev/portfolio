@@ -24,19 +24,22 @@ export default function Home() {
   return (
     <>
       <Header />
-     <div id="wrapper-canvas" className="w-full top-0 left-0 h-100vh absolute  overflow-hidden -z-999"></div>
-      <div className="flex justify-between items-center h-[80vh] px-7 py-2">
+      <div
+        id="wrapper-canvas"
+        className="w-full top-0 left-0 h-[100vh] absolute overflow-hidden z-0 pointer-events-auto hidden md:block"
+      ></div>
+      <div className="flex justify-between items-center h-[80vh] px-7 py-2 pointer-events-none">
         <div>{""}</div>
         <div className="flex items-center w-[600px] h-auto relative">
           <div className="flex flex-col gap-4 absolute left-[-0.4rem] items-start md:sm:left-[-3rem] lg:left-[-8rem]">
-            <h1 className="text-[1.8rem] lg:text-[2.1rem] font-semibold w-max font-mono pointer-events-none">
+            <h1 className="text-[1.8rem] lg:text-[2.1rem] font-semibold w-max font-mono">
               Abhishek Pundir
             </h1>
             <p className="font-sans">
               <i>Front-End Developer</i>
             </p>
             <button
-              className="topSectionBtn"
+              className="topSectionBtn pointer-events-auto"
               onClick={() => {
                 setShowPopup(true);
               }}
@@ -44,11 +47,11 @@ export default function Home() {
               About Me
             </button>
           </div>
-          <NameLogo style={{ width: "100%", height: "auto" }} className='pointer-events-none' />
+          <NameLogo style={{ width: "100%", height: "auto" }} />
         </div>
         <ul
-          className={`flex flex-col gap-5 ${
-            isDarkMode ? "text-[#b0b2c3]" : "text-gray-600"
+          className={`flex flex-col gap-5 z-10 pointer-events-auto ${
+            isDarkMode ? "text-white" : "text-black"
           }`}
         >
           <li title="linkedin">
@@ -58,9 +61,9 @@ export default function Home() {
               rel="noreferrer noopener"
             >
               <LinkedInLogo
-                className={`w-4 ${
-                  isDarkMode ? "hover:text-white" : "hover:text-black"
-                } `}
+                className={`rightSectionIcons ${
+                  isDarkMode ? "hover:text-pink-700" : "hover:text-[#2fff00] "
+                }`}
               />
             </a>
           </li>
@@ -71,18 +74,18 @@ export default function Home() {
               rel="noreferrer noopener"
             >
               <GitHubLogo
-                className={`w-4 ${
-                  isDarkMode ? "hover:text-white" : "hover:text-black"
-                } `}
+               className={`rightSectionIcons ${
+                  isDarkMode ? "hover:text-pink-700" : "hover:text-[#2fff00] "
+                }`}
               />
             </a>
           </li>
           <li title="mail">
             <a href={mailLink}>
               <EmailLogo
-                className={`w-4 ${
-                  isDarkMode ? "hover:text-white" : "hover:text-black"
-                } `}
+               className={`rightSectionIcons ${
+                  isDarkMode ? "hover:text-pink-700" : "hover:text-[#2fff00] "
+                }`}
               />
             </a>
           </li>
@@ -101,7 +104,7 @@ export default function Home() {
           Latest Works
           <img
             src="/src/assets/images/downarrow.png"
-            alt="down-arrow"
+            alt="scroll-down"
             className={`absolute top-9 left-2/6 w-11 group-hover:translate-y-2 transition-all duration-400 ease-in-out ${
               isDarkMode && "invert"
             } `}
@@ -109,7 +112,9 @@ export default function Home() {
         </button>
       </div>
 
-      {showPopup && <Popup onClose={() => setShowPopup(false)} />}
+      {showPopup && (
+        <Popup onClose={() => setShowPopup(false)} isDarkMode={isDarkMode} />
+      )}
     </>
   );
 }

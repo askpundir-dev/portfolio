@@ -10,24 +10,23 @@ import "./Header.css";
 
 export default function Header() {
   const { isDarkMode, setIsDarkMode } = useDaRkModeContext();
- const mailLink = import.meta.env.VITE_GMAIL_URL;
-
+  const mailLink = import.meta.env.VITE_GMAIL_URL;
   const toggleDarkMode = () => setIsDarkMode((prev) => !prev);
   const hoverStyle = isDarkMode ? "hover:text-white" : "hover:border-white";
   return (
     <header
-      className={`flex h-[10vh] justify-around items-center  py-3 gap-x-20  
+      className={`flex h-[10vh] justify-around items-center  py-3 gap-x-20 pointer-events-none relative z-30 
         ${isDarkMode ? "text-red-500" : "text-white"} 
       ${isDarkMode ? "" : "bg-red-800"}`}
     >
-      <a href="/">
+      <a href="/" className="pointer-events-auto">
         <NameLogo
           className={`icon nameLogo ${
             isDarkMode ? "hover:text-white" : "hover:border-white"
           }`}
         />
       </a>
-      <div className="flex gap-3">
+      <div className="flex gap-3 pointer-events-auto">
         {!isDarkMode && (
           <button title="Toggle Dark Mode">
             <DarkModeIcon

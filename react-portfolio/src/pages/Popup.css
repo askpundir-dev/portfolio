@@ -32,7 +32,6 @@
   }
 }
 
-
 /* backdrop effects */
 .backdropEffects {
   animation: backdrop-appearance 350ms ease-in-out forwards;
