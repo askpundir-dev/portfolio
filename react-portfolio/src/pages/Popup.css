@@ -66,12 +66,69 @@
   .skillStyles {
     @apply border border-[#383737] px-[11px] py-[7px] rounded-[999px];
   }
+  .popupHeadingStyles {
+    @apply font-bold text-[1.5rem] mt-6;
+  }
 }
 
-.skillStylesLIghtMode{
+.skillStylesLIghtMode {
   box-shadow: -1px 0px 2px 1px gray;
 }
 
 .popup-content-container {
   scrollbar-width: none;
+}
+
+@media not (max-width: 450px) {
+  .scrollButton {
+    display: none;
+  }
+}
+
+/* 
+this is 1 way of doing this 
+
+.dark mark {
+  color: #02d4fe;
+  background-color: transparent;
+}
+
+.light mark {
+  color: red;
+  background-color: transparent;
+} */
+
+.popup.dark mark {
+  color: #02d4fe;
+  background-color: transparent;
+}
+.popup.light mark {
+  color: red;
+  background-color: transparent;
+}
+
+/* not looking good*/
+/* .popup.light mark{
+  background-color: yellow;
+  border-radius: 999px;
+} */
+
+.popup.dark {
+  background-color: #151414d3;
+}
+
+.popup.light {
+  background-color: rgba(255, 255, 255, 0.89);
+}
+
+.popup.light h2 {
+  color: blue;
+}
+
+.popup.dark h2 {
+  color: #20db23;
+}
+
+.popup h2{
+  margin-bottom: 1.2rem;
 }

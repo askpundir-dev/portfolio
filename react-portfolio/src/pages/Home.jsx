@@ -4,6 +4,7 @@ import LinkedInLogo from "../assets/icons/linkedin.svg?react";
 import GitHubLogo from "../assets/icons/github.svg?react";
 import EmailLogo from "../assets/icons/email.svg?react";
 import NameLogo from "../assets/images/name-logo.svg?react";
+import ScrollDownIcon from "../assets/icons/scroll-down.svg?react";
 import "./Home.css";
 import { useDaRkModeContext } from "../context-provider/context";
 import { useEffect, useState } from "react";
@@ -13,9 +14,10 @@ import Popup from "./Popup";
 export default function Home() {
   const { isDarkMode } = useDaRkModeContext();
   const [showPopup, setShowPopup] = useState(false);
-  useEffect(() => {
-    if (showPopup) document.body.onscroll = () => setShowPopup(false);
-  }, [showPopup]);
+  //this is to close popup on scroll
+  // useEffect(() => {
+  //   if (showPopup) document.body.onscroll = () => setShowPopup(false);
+  // }, [showPopup]);
 
   useEffect(() => {
     initMatter();
@@ -62,7 +64,7 @@ export default function Home() {
             >
               <LinkedInLogo
                 className={`rightSectionIcons ${
-                  isDarkMode ? "hover:text-pink-700" : "hover:text-[#2fff00] "
+                  isDarkMode ? "hover:text-pink-700" : "hover:text-orange-500"
                 }`}
               />
             </a>
@@ -74,8 +76,8 @@ export default function Home() {
               rel="noreferrer noopener"
             >
               <GitHubLogo
-               className={`rightSectionIcons ${
-                  isDarkMode ? "hover:text-pink-700" : "hover:text-[#2fff00] "
+                className={`rightSectionIcons ${
+                  isDarkMode ? "hover:text-pink-700" : "hover:text-orange-500"
                 }`}
               />
             </a>
@@ -83,8 +85,8 @@ export default function Home() {
           <li title="mail">
             <a href={mailLink}>
               <EmailLogo
-               className={`rightSectionIcons ${
-                  isDarkMode ? "hover:text-pink-700" : "hover:text-[#2fff00] "
+                className={`rightSectionIcons ${
+                  isDarkMode ? "hover:text-pink-700" : "hover:text-orange-500"
                 }`}
               />
             </a>
@@ -102,18 +104,23 @@ export default function Home() {
           }}
         >
           Latest Works
-          <img
-            src="/src/assets/images/downarrow.png"
-            alt="scroll-down"
-            className={`absolute top-9 left-2/6 w-11 group-hover:translate-y-2 transition-all duration-400 ease-in-out ${
-              isDarkMode && "invert"
-            } `}
+          <ScrollDownIcon
+            className={`absolute top-9 left-2/6 w-10 group-hover:translate-y-2 transition-all duration-320 ease-in-out  ${
+              isDarkMode ? "text-white" : "text-black"
+            }`}
           />
         </button>
       </div>
 
       {showPopup && (
-        <Popup onClose={() => setShowPopup(false)} isDarkMode={isDarkMode} />
+        <Popup
+          onClose={() => setShowPopup(false)}
+          isDarkMode={isDarkMode}
+          mailLink={mailLink}
+          LinkedInLogo={LinkedInLogo}
+          GitHubLogo={GitHubLogo}
+          EmailLogo={EmailLogo}
+        />
       )}
     </>
   );

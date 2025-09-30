@@ -19,7 +19,7 @@ export default function Header() {
         ${isDarkMode ? "text-red-500" : "text-white"} 
       ${isDarkMode ? "" : "bg-red-800"}`}
     >
-      <a href="/" className="pointer-events-auto">
+      <a href="/" className="pointer-events-auto" title="refresh page">
         <NameLogo
           className={`icon nameLogo ${
             isDarkMode ? "hover:text-white" : "hover:border-white"
@@ -45,7 +45,7 @@ export default function Header() {
           </button>
         )}
 
-        <a href={mailLink}>
+        <a href={mailLink} title="mail me">
           <EmailLogo className={`icon iconSize ${hoverStyle} `} />
         </a>
       </div>
