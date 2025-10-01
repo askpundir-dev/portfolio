@@ -4,13 +4,10 @@ import LightModeIcon from "../assets/icons/sun.svg?react";
 // import PhoneIcon from "../assets/icons/phone.svg?react";
 // import WhatsAppIcon from "../assets/icons/whatsapp.svg?react";
 import EmailLogo from "../assets/icons/email.svg?react";
-import { useDaRkModeContext } from "../context-provider/context";
 import { Link } from "react-router-dom";
 import "./Header.css";
 
-export default function Header() {
-  const { isDarkMode, setIsDarkMode } = useDaRkModeContext();
-  const mailLink = import.meta.env.VITE_GMAIL_URL;
+export default function Header({ isDarkMode, setIsDarkMode,mailLink}) {
   const toggleDarkMode = () => setIsDarkMode((prev) => !prev);
   const hoverStyle = isDarkMode ? "hover:text-white" : "hover:border-white";
   return (

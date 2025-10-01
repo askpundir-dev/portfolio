@@ -3,15 +3,25 @@
 body {
   font-family: Roboto, Arial;
   /* font-family:poppins, Arial, sans-serif; */
-  background-color: white;
-  color: black;
   transition: background-color 0.5s, color 0.5s;
 }
 
 body.darkMode {
-  background-color: #121212;
+  background-color: rgba(0, 0, 0, 0.952);
+  /* background-color: #121212; */
   color: #ffffff;
   transition: background-color 0.5s, color 0.5s;
+}
+
+body.lightMode {
+  background-color: white;
+  color: black;
+}
+
+h1,
+h2,
+h3 {
+  font-family: monospace;
 }
 
 button:hover {
