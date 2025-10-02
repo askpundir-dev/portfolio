@@ -4,7 +4,7 @@ export default function Project({ isDarkMode, project, index }) {
 
   return (
     <div className="project flex gap-y-7 justify-between flex-wrap md:flex-nowrap lg:px-7">
-     <ProjectShowCase index={index} project={project} />
+     <ProjectShowCase index={index} project={project} isDarkMode={isDarkMode} />
       <div
         className={`project-description-container md:w-[50%]  px-8 md:px-3 order-1 ${
           index % 2 === 0 ? "md:order-2" : "md:order-1 md:ml-10 lg:ml-25"

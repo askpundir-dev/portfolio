@@ -2,7 +2,7 @@
 
 @layer components {
   .project-image-inside-mackbook {
-    @apply absolute left-1/2 -translate-x-1/2 w-[76%] h-[90%] rounded-[3px];
+    @apply absolute left-1/2 -translate-x-1/2 w-[79%] h-[95%] rounded-[5px];
   }
 
   .project-image-inside-ipad{
@@ -15,6 +15,12 @@
   filter:drop-shadow(3px 2px 16px rgba(255, 255, 255, 0.162));
 } */
 
-.product-image.screen-on {
+
+.project-image.screen-on {
   filter: drop-shadow(3px 2px 36px rgba(255, 255, 255, 0.418));
+}
+
+
+.project-image.screen-on.change-image{
+   
 }
