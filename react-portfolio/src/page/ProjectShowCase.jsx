@@ -26,6 +26,7 @@ export default function ProjectShowCase({ index, project, isDarkMode }) {
           {isScreenOn && (
             <>
               <button
+                title="scroll previous"
                 onClick={prevImage}
                 className={`absolute top-1/2 -left-3 lg:left-3 -translate-y-1/2 z-20 p-2 hover:scale-[1.5] rounded-full shadow-black ${
                   !isDarkMode ? "invert" : ""
@@ -38,6 +39,7 @@ export default function ProjectShowCase({ index, project, isDarkMode }) {
                 />
               </button>
               <button
+                title="scroll next"
                 onClick={nextImage}
                 className={`absolute top-1/2 -right-3 lg:right-3 -translate-y-1/2 z-20 p-2 hover:scale-[1.5] rounded-full shadow-black ${
                   !isDarkMode ? "invert" : ""
@@ -60,16 +62,28 @@ export default function ProjectShowCase({ index, project, isDarkMode }) {
           />
 
           {/* --- Screen Content --- */}
-          <img
+          {/* <img
             className={`project-image project-image-inside-mackbook top-0 lg:top-[4px] z-0 object-cover ${
               isScreenOn ? "block screen-on" : "hidden"
             }`}
             src={project.images[currentIndex].src}
             alt={project.images[currentIndex].alt}
-          />
+          /> */}
+          {/* --- Screen Content --- */}
+          {project.images.map((img, i) => (
+            <img
+              key={i}
+              className={`project-image project-image-inside-mackbook top-1 lg:top-[7px] z-0 ${
+                isScreenOn && i === currentIndex ? "active" : ""
+              }`}
+              src={img.src}
+              alt={img.alt}
+            />
+          ))}
 
           {/* --- Screen Off Overlay --- */}
           <div
+            title={`tap once to turn ${isScreenOn ? "off" : "on"}`}
             onClick={() => {
               setIsScreenOn((prev) => !prev);
             }}

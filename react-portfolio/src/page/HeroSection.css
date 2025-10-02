@@ -1,0 +1,18 @@
+.scroll-back-to-top {
+  position: fixed;
+  bottom: 5vh;
+  right: 3vw;
+  transform: translateX(10vw);
+  background: #00b6d1;
+  color: white;
+  z-index: 99;
+  padding: 10px 12px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: all 600ms ease-in-out;
+}
+
+.scroll-back-to-top.scroll-top-active {
+  transform: translateX(0);
+  opacity: 1;
+}

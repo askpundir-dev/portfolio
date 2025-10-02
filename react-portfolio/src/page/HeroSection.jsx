@@ -1,15 +1,30 @@
+import { useEffect } from "react";
 import LinkedInLogo from "../assets/icons/linkedin.svg?react";
 import GitHubLogo from "../assets/icons/github.svg?react";
 import EmailLogo from "../assets/icons/email.svg?react";
 import NameLogo from "../assets/images/name-logo.svg?react";
 import ScrollDownIcon from "../assets/icons/scroll-down.svg?react";
 import Popup from "./Popup";
+import "./HeroSection.css";
 export default function HeroSection({
   showPopup,
   setShowPopup,
   isDarkMode,
   mailLink,
 }) {
+  useEffect(() => {
+    const scrollBtn = document.querySelector(".scroll-back-to-top");
+    const handleScroll = () => {
+      if (window.scrollY > 200) {
+        scrollBtn?.classList.add("scroll-top-active");
+      } else {
+        scrollBtn?.classList.remove("scroll-top-active");
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <section className="hero-section h-[90dvh]">
       <div
@@ -85,8 +100,15 @@ export default function HeroSection({
           className="topSectionBtn mx-auto -mt-6 block relative group"
           onClick={(e) => {
             e.preventDefault();
-            window.scrollTo(0, 694);
-            console.log("eww bro");
+            const target = document.querySelector(".project-heading");
+            if (target) {
+              target.scrollIntoView({ behavior: "smooth" });
+            }
+            const scrollTopButton = document.querySelector(
+              ".scroll-back-to-top"
+            );
+            if (scrollTopButton)
+              scrollTopButton.classList.add("scroll-top-active");
           }}
         >
           Latest Works
@@ -108,6 +130,17 @@ export default function HeroSection({
           EmailLogo={EmailLogo}
         />
       )}
+
+      {/* scroll to tp button */}
+      <button
+      title="scroll to top"
+        onClick={() => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }}
+        className="scroll-back-to-top"
+      >
+        <img src="/src/assets/icons/scroll-top.svg" alt="scroll to top" />
+      </button>
     </section>
   );
 }
