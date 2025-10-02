@@ -2,10 +2,9 @@ import { useEffect, useState } from "react";
 import { useDaRkModeContext } from "../context-provider/context";
 import Header from "../components/Header";
 import HeroSection from "./HeroSection";
-import ProjectSection from './ProjectSection'
+import ProjectSection from "./ProjectSection";
 import { initMatter } from "../animation/matter";
 import "./Home.css";
-
 
 //Home.jsx
 export default function Home() {
@@ -29,7 +28,7 @@ export default function Home() {
       />
 
       <HeroSection {...{ showPopup, setShowPopup, isDarkMode, mailLink }} />
-     <hr className="text-gray-700" />
+      <hr />
       <ProjectSection isDarkMode={isDarkMode} />
     </>
   );
