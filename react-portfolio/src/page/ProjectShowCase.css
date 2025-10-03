@@ -16,5 +16,5 @@
   opacity: 1;
   /* display:block; */ /* for performance */
   z-index: 1;
-  filter: drop-shadow(3px 2px 36px rgba(255, 255, 255, 0.418));
+  filter: drop-shadow(1px 0px 32px rgba(255, 255, 255, 0.418));
 }
