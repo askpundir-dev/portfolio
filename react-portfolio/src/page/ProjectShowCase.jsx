@@ -4,8 +4,13 @@ import "./ProjectShowCase.css";
 export default function ProjectShowCase({ index, project, isDarkMode }) {
   const [isScreenOn, setIsScreenOn] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
+  // const nextImage = () => {
+  //   setCurrentIndex((prev) => (prev + 1) % project.images.length);
+  // };
   const nextImage = () => {
-    setCurrentIndex((prev) => (prev + 1) % project.images.length);
+    setCurrentIndex((prev) =>
+      prev === project.images.length - 1 ? 0 : prev + 1
+    );
   };
 
   const prevImage = () => {
@@ -28,7 +33,7 @@ export default function ProjectShowCase({ index, project, isDarkMode }) {
               <button
                 title="scroll previous"
                 onClick={prevImage}
-                className={`absolute top-1/2 -left-3 lg:left-3 -translate-y-1/2 z-20 p-2 hover:scale-[1.5] rounded-full shadow-black ${
+                className={`absolute top-1/2 -left-3 lg:left-3 -translate-y-1/2 z-20 hover:scale-[1.5] rounded-full shadow-black ${
                   !isDarkMode ? "invert" : ""
                 }`}
               >
@@ -41,7 +46,7 @@ export default function ProjectShowCase({ index, project, isDarkMode }) {
               <button
                 title="scroll next"
                 onClick={nextImage}
-                className={`absolute top-1/2 -right-3 lg:right-3 -translate-y-1/2 z-20 p-2 hover:scale-[1.5] rounded-full shadow-black ${
+                className={`absolute top-1/2 -right-3 lg:right-3 -translate-y-1/2 z-20 hover:scale-[1.5] rounded-full shadow-black ${
                   !isDarkMode ? "invert" : ""
                 }`}
               >
@@ -87,8 +92,8 @@ export default function ProjectShowCase({ index, project, isDarkMode }) {
             onClick={() => {
               setIsScreenOn((prev) => !prev);
             }}
-            className={`z-50 screen-off-background   project-image-inside-mackbook top-[4px] cursor-pointer transition-all duration-700 ease-in ${
-              !isScreenOn && "bg-black"
+            className={`z-50 screen-off-background project-image-inside-mackbook top-[4px] cursor-pointer transition-all duration-700 ease-in ${
+              (!isScreenOn && "bg-black") || ""
             }`}
           ></div>
         </div>

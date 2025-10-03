@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useDaRkModeContext } from "../context-provider/context";
 import Header from "../components/Header";
 import HeroSection from "./HeroSection";
 import ProjectSection from "./ProjectSection";
-import { initMatter } from "../animation/matter";
+import Footer from "../components/Footer";
 import "./Home.css";
 
 //Home.jsx
@@ -15,9 +15,6 @@ export default function Home() {
   //   if (showPopup) document.body.onscroll = () => setShowPopup(false);
   // }, [showPopup]);
 
-  useEffect(() => {
-    initMatter();
-  }, []);
   const mailLink = import.meta.env.VITE_GMAIL_URL;
   return (
     <>
@@ -28,8 +25,10 @@ export default function Home() {
       />
 
       <HeroSection {...{ showPopup, setShowPopup, isDarkMode, mailLink }} />
-      <hr />
+      <hr className={`${isDarkMode ? "text-gray-700" : "text-gray-400"}`} />
       <ProjectSection isDarkMode={isDarkMode} />
+      <hr className={`${isDarkMode ? "text-gray-700" : "text-gray-400"}`} />
+      <Footer />
     </>
   );
 }

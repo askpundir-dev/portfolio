@@ -5,6 +5,7 @@ import EmailLogo from "../assets/icons/email.svg?react";
 import NameLogo from "../assets/images/name-logo.svg?react";
 import ScrollDownIcon from "../assets/icons/scroll-down.svg?react";
 import Popup from "./Popup";
+import { initMatter } from "../animation/matter";
 import "./HeroSection.css";
 export default function HeroSection({
   showPopup,
@@ -13,6 +14,8 @@ export default function HeroSection({
   mailLink,
 }) {
   useEffect(() => {
+    // this runs the animation
+    initMatter();
     const scrollBtn = document.querySelector(".scroll-back-to-top");
     const handleScroll = () => {
       if (window.scrollY > 200) {
@@ -133,7 +136,7 @@ export default function HeroSection({
 
       {/* scroll to tp button */}
       <button
-      title="scroll to top"
+        title="scroll to top"
         onClick={() => {
           window.scrollTo({ top: 0, behavior: "smooth" });
         }}

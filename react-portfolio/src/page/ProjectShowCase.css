@@ -2,19 +2,19 @@
 
 @layer components {
   .project-image-inside-mackbook {
-    @apply absolute left-1/2 -translate-x-1/2 w-[79%] h-[95%] rounded-[5px];
+    @apply absolute left-1/2 -translate-x-1/2 w-[79%] h-[94%] rounded-[5px];
   }
-}
-.project-image.screen-on {
-  filter: drop-shadow(3px 2px 36px rgba(255, 255, 255, 0.418));
 }
 
 .project-image {
-  transition: opacity 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   opacity: 0;
+  /* display:none; */ /* for performance */
 }
 
 .project-image.active {
   opacity: 1;
+  /* display:block; */ /* for performance */
   z-index: 1;
+  filter: drop-shadow(3px 2px 36px rgba(255, 255, 255, 0.418));
 }
