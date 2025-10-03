@@ -18,13 +18,16 @@ export default function Home() {
   const mailLink = import.meta.env.VITE_GMAIL_URL;
   return (
     <>
-      <Header
-        isDarkMode={isDarkMode}
-        setIsDarkMode={setIsDarkMode}
-        mailLink={mailLink}
-      />
+      <div className="h-[100dvh]">
+        <Header
+          isDarkMode={isDarkMode}
+          setIsDarkMode={setIsDarkMode}
+          mailLink={mailLink}
+        />
 
-      <HeroSection {...{ showPopup, setShowPopup, isDarkMode, mailLink }} />
+        <HeroSection {...{ showPopup, setShowPopup, isDarkMode, mailLink }} />
+      </div>
+
       <hr className={`${isDarkMode ? "text-gray-700" : "text-gray-400"}`} />
       <ProjectSection isDarkMode={isDarkMode} />
       <hr className={`${isDarkMode ? "text-gray-700" : "text-gray-400"}`} />

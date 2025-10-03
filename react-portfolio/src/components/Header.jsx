@@ -12,7 +12,7 @@ export default function Header({ isDarkMode, setIsDarkMode,mailLink}) {
   const hoverStyle = isDarkMode ? "hover:text-white" : "hover:border-white";
   return (
     <header
-      className={`flex h-[10vh] justify-around items-center  py-3 gap-x-20 pointer-events-none relative z-30 
+      className={`flex h-[10%] justify-around items-center  py-3 gap-x-20 pointer-events-none relative z-30 
         ${isDarkMode ? "text-red-500" : "text-white"} 
       ${isDarkMode ? "" : "bg-red-800"}`}
     >

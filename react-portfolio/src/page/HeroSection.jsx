@@ -30,12 +30,12 @@ export default function HeroSection({
   }, []);
 
   return (
-    <section className="hero-section h-[90dvh]">
+    <section className="hero-section h-[90%]">
       <div
         id="wrapper-canvas"
         className="w-full top-0 left-0 h-[100vh] absolute overflow-hidden z-0 pointer-events-auto hidden md:block"
       ></div>
-      <div className="flex justify-between items-center h-[80vh] px-7 py-2 pointer-events-none">
+      <div className="flex justify-between items-center h-[90%] px-7 py-2 pointer-events-none">
         <div>{""}</div>
         <div className="flex items-center w-[600px] h-auto relative">
           <div className="flex flex-col gap-4 absolute left-[-0.4rem] items-start font-mono md:sm:left-[-3rem] lg:left-[-8rem]">
@@ -100,7 +100,7 @@ export default function HeroSection({
         </ul>
       </div>
 
-      <div className="w-full h-[10vh]">
+      <div className="w-full h-[10%]">
         <button
           className="topSectionBtn mx-auto -mt-6 block relative group"
           onClick={(e) => {
