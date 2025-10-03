@@ -38,7 +38,6 @@ const projects = [
   },
   {
     id: 2,
-    folder: "amazon-react-clone",
     images: [
       {
         src: "/src/assets/projects-images/amazon-react-clone/homepage.png",
