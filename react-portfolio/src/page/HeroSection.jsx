@@ -2,7 +2,8 @@ import { useEffect } from "react";
 import LinkedInLogo from "../assets/icons/linkedin.svg?react";
 import GitHubLogo from "../assets/icons/github.svg?react";
 import EmailLogo from "../assets/icons/email.svg?react";
-import NameLogo from "../assets/images/name-logo.svg?react";
+// import NameLogo from "../assets/images/name-logo.svg?react";
+import HeroSectionSvg from "./HeroSectionSvg";
 import ScrollDownIcon from "../assets/icons/scroll-down.svg?react";
 import Popup from "./Popup";
 import { initMatter } from "../animation/matter";
@@ -53,7 +54,8 @@ export default function HeroSection({
               About Me
             </button>
           </div>
-          <NameLogo style={{ width: "100%", height: "auto" }} />
+          {/* <NameLogo style={{ width: "100%", height: "auto" }} /> */}
+          <HeroSectionSvg />
         </div>
         <ul
           className={`flex flex-col gap-5 z-10 pointer-events-auto ${

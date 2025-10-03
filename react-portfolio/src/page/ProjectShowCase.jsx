@@ -88,6 +88,7 @@ export default function ProjectShowCase({ index, project, isDarkMode }) {
 
           {/* --- Screen Off Overlay --- */}
           <div
+            role="button"
             title={`tap once to turn ${isScreenOn ? "off" : "on"}`}
             onClick={() => {
               setIsScreenOn((prev) => !prev);

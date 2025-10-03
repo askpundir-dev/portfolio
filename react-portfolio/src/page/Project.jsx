@@ -1,6 +1,6 @@
 import ProjectShowCase from "./ProjectShowCase.jsx";
 export default function Project({ isDarkMode, project, index }) {
-  console.log(project);
+  //console.log(project);
 
   return (
     <div className="project flex gap-y-7 justify-between flex-wrap md:flex-nowrap lg:px-7">
