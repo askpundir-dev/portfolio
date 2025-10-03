@@ -40,7 +40,7 @@ export default function Popup({
       >
         <div
           ref={popupRef}
-          className={`popup flex flex-col fixed w-[92vw] h-[90vh] max-h-[1100px] max-w-[1200px] top-2/4 left-2/4 rounded-[7px] px-3 py-2.5 popupEffects border gap-4 ${
+          className={`popup flex flex-col fixed w-[92vw] h-[90dvh] md:h-[90vh] max-h-[1100px] max-w-[1200px] top-2/4 left-2/4 rounded-[7px] px-3 py-2.5 popupEffects border gap-4 ${
             isDarkMode ? "dark" : "light"
           } md:pl-12 lg:pl-15 xl:pl-18`}
         >
