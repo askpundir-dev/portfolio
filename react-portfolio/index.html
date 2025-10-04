@@ -38,6 +38,12 @@
   </head>
   <body>
     <div id="root"></div>
+    <!-- A hidden form for Netlify bots to detect the fields -->
+    <form name="contactMe" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
