@@ -1,4 +1,7 @@
 import { useState } from "react";
+import scrollLeftImage from "../assets/icons/scroll-left.png";
+import scrollRightImage from "../assets/icons/scroll-right.png";
+import mackBookImage from "../assets/images/mack-book.png";
 import "./ProjectShowCase.css";
 
 export default function ProjectShowCase({ index, project, isDarkMode }) {
@@ -37,11 +40,7 @@ export default function ProjectShowCase({ index, project, isDarkMode }) {
                   !isDarkMode ? "invert" : ""
                 }`}
               >
-                <img
-                  className="w-7"
-                  src="/src/assets/icons/scroll-left.png"
-                  alt="scroll left"
-                />
+                <img className="w-7" src={scrollLeftImage} alt="scroll left" />
               </button>
               <button
                 title="scroll next"
@@ -52,7 +51,7 @@ export default function ProjectShowCase({ index, project, isDarkMode }) {
               >
                 <img
                   className="w-7"
-                  src="/src/assets/icons/scroll-right.png"
+                  src={scrollRightImage}
                   alt="scroll right"
                 />
               </button>
@@ -62,7 +61,7 @@ export default function ProjectShowCase({ index, project, isDarkMode }) {
           {/* --- MacBook Frame --- */}
           <img
             className="mack-book max-w-full max-h-full relative z-10"
-            src="/src/assets/images/mack-book.png"
+            src={mackBookImage}
             alt="mack book"
           />
 

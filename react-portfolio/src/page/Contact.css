@@ -25,9 +25,8 @@
   opacity: 0.6;
 }
 
-
-.contact-section.light form{
+.contact-section.light form {
   background-color: rgba(0, 0, 0, 0.9);
   box-shadow: 0px 1px 4px 4px rgba(0, 0, 255, 0.484);
-  border:2px solid rgb(0, 8, 255);
-} 
+  border: 2px solid rgb(0, 8, 255);
+}

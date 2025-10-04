@@ -7,6 +7,7 @@ import HeroSectionSvg from "./HeroSectionSvg";
 import ScrollDownIcon from "../assets/icons/scroll-down.svg?react";
 import Popup from "./Popup";
 import { initMatter } from "../animation/matter";
+import scrollTopImage from '../assets/icons/scroll-top.svg'
 import "./HeroSection.css";
 export default function HeroSection({
   showPopup,
@@ -144,7 +145,7 @@ export default function HeroSection({
         }}
         className="scroll-back-to-top"
       >
-        <img src="/src/assets/icons/scroll-top.svg" alt="scroll to top" />
+        <img src={scrollTopImage} alt="scroll to top" />
       </button>
     </section>
   );

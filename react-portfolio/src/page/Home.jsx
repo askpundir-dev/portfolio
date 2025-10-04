@@ -4,7 +4,7 @@ import Header from "../components/Header";
 import HeroSection from "./HeroSection";
 import ProjectSection from "./ProjectSection";
 import Contact from "./Contact";
-import Footer from '../components/Footer';
+import Footer from "../components/Footer";
 import "./Home.css";
 
 //Home.jsx
@@ -35,7 +35,7 @@ export default function Home() {
         className={`my-5 ${isDarkMode ? "text-gray-700" : "text-gray-400"}`}
       />
       <Contact isDarkMode={isDarkMode} />
-     <hr
+      <hr
         className={`my-5 ${isDarkMode ? "text-gray-700" : "text-gray-400"}`}
       />
       <Footer mailLink={mailLink} isDarkMode={isDarkMode} />

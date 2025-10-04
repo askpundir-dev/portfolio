@@ -1,3 +1,5 @@
+import contactImage from "../assets/images/contact-me.svg";
+
 import "./Contact.css";
 
 export default function Contact({ isDarkMode }) {
@@ -12,7 +14,7 @@ export default function Contact({ isDarkMode }) {
         <div className="image-container absolute left-1/2 top-1/2 -translate-1/2 md:translate-0 z-0 md:static md:w-1/2 md:p-5 w-[100%] h-auto">
           <img
             className="max-w-full max-h-full"
-            src="/src/assets/images/contact-me.svg"
+            src={contactImage}
             alt="contact"
           />
         </div>

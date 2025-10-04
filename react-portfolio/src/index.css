@@ -3,7 +3,7 @@
 body {
   font-family: Roboto, Arial;
   /* font-family:poppins, Arial, sans-serif; */
-   background-color: rgba(218, 238, 210, 0.249);
+  background-color: rgba(218, 238, 210, 0.249);
   transition: background-color 0.5s, color 0.5s;
 }
 
