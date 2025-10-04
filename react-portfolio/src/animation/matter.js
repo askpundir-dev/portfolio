@@ -1,5 +1,3 @@
-
-
 import Matter from "matter-js";
 import MatterWrap from "matter-wrap";
 import MatterAttractors from "matter-attractors";
