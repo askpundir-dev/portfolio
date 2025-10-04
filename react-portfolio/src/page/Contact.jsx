@@ -20,11 +20,13 @@ export default function Contact({ isDarkMode }) {
         </div>
         <div className="form-container px-4 py-3 md:px-10 md:py-4 md:w-1/2">
           <form
-            onSubmit={(e) => {
-              e.preventDefault();
-            }}
+            method="POST"
+            name="contactMe"
+            data-netlify="true"
             className="border px-5 py-7 lg:p-9 rounded-[6px] relative z-50"
           >
+            <input type="hidden" name="form-name" value="contactMe" />
+
             <div className="name-input-container mb-5">
               <label
                 for="username-address-icon"
@@ -52,6 +54,7 @@ export default function Contact({ isDarkMode }) {
                   </svg>
                 </div>
                 <input
+                  name="name"
                   type="text"
                   id="username-address-icon"
                   className="block w-full ps-10 p-2.5 text-sm  text-white bg-[#364153] rounded-lg  border-gray-600 placeholder-gray-400"
@@ -81,7 +84,8 @@ export default function Contact({ isDarkMode }) {
                   </svg>
                 </div>
                 <input
-                  type="text"
+                  type="email"
+                  name="email"
                   id="email-address-icon"
                   className="block w-full ps-10 p-2.5 text-sm  text-white bg-[#364153] rounded-lg  border-gray-600 placeholder-gray-400"
                   placeholder="example123@gmail.com"
@@ -99,13 +103,17 @@ export default function Contact({ isDarkMode }) {
               </label>
               <textarea
                 id="message"
+                name="message"
                 rows="5"
                 className="block p-3 w-full text-sm  text-white bg-[#364153] rounded-lg  border-gray-600 placeholder-gray-400"
                 placeholder="Leave a comment..."
               ></textarea>
             </div>
             <div className="button-container mt-7 mb-0 h-10">
-              <button className="border w-full rounded-[6px] bg-[#00b6d1] text-white font-bold h-full hover:opacity-80">
+              <button
+                type="submit"
+                className="border w-full rounded-[6px] bg-[#00b6d1] text-white font-bold h-full hover:opacity-80"
+              >
                 Send
               </button>
             </div>

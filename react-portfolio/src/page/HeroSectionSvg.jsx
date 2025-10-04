@@ -60,7 +60,7 @@ export default function HeroSectionSvg() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentGradient((prev) => (prev + 1) % gradients.length);
-    }, 4000); // every 4 seconds
+    }, 2500); // every 2.5 seconds
 
     return () => clearInterval(interval);
   }, []);
