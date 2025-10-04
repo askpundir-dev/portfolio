@@ -1,5 +1,4 @@
 import contactImage from "../assets/images/contact-me.svg";
-
 import "./Contact.css";
 
 export default function Contact({ isDarkMode }) {
@@ -10,7 +9,9 @@ export default function Contact({ isDarkMode }) {
       }`}
     >
       <h2 className="lets-connect">Let's Connect</h2>
+
       <div className="md:flex md:items-center w-full">
+        {/* IMAGE SECTION */}
         <div className="image-container absolute left-1/2 top-1/2 -translate-1/2 md:translate-0 z-0 md:static md:w-1/2 md:p-5 w-[100%] h-auto">
           <img
             className="max-w-full max-h-full"
@@ -18,20 +19,30 @@ export default function Contact({ isDarkMode }) {
             alt="contact"
           />
         </div>
+
+        {/* FORM SECTION */}
         <div className="form-container px-4 py-3 md:px-10 md:py-4 md:w-1/2">
           <form
-            method="POST"
             name="contactMe"
+            method="POST"
             data-netlify="true"
+            data-netlify-honeypot="bot-field"
             className="border px-5 py-7 lg:p-9 rounded-[6px] relative z-50"
           >
+            {/* Required hidden fields for Netlify */}
             <input type="hidden" name="form-name" value="contactMe" />
+            <p className="hidden">
+              <label>
+                Don’t fill this out if you’re human:{" "}
+                <input name="bot-field" />
+              </label>
+            </p>
 
+            {/* NAME FIELD */}
             <div className="name-input-container mb-5">
               <label
-                for="username-address-icon"
-                className="block mb-2 text-sm font-medium
-              cursor-pointer text-gray-900 dark:text-white"
+                htmlFor="username-address-icon"
+                className="block mb-2 text-sm font-medium cursor-pointer text-gray-900 dark:text-white"
               >
                 Your Name
               </label>
@@ -44,9 +55,9 @@ export default function Contact({ isDarkMode }) {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     className="w-4 h-4 text-gray-400"
                   >
                     <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
@@ -57,16 +68,18 @@ export default function Contact({ isDarkMode }) {
                   name="name"
                   type="text"
                   id="username-address-icon"
-                  className="block w-full ps-10 p-2.5 text-sm  text-white bg-[#364153] rounded-lg  border-gray-600 placeholder-gray-400"
+                  required
+                  className="block w-full ps-10 p-2.5 text-sm text-white bg-[#364153] rounded-lg border-gray-600 placeholder-gray-400"
                   placeholder="enter your name"
                 />
               </div>
             </div>
+
+            {/* EMAIL FIELD */}
             <div className="email-input-container mb-5">
               <label
-                for="email-address-icon"
-                className="block mb-2 text-sm font-medium
-              cursor-pointer text-gray-900 dark:text-white"
+                htmlFor="email-address-icon"
+                className="block mb-2 text-sm font-medium cursor-pointer text-gray-900 dark:text-white"
               >
                 Your Email
               </label>
@@ -87,17 +100,18 @@ export default function Contact({ isDarkMode }) {
                   type="email"
                   name="email"
                   id="email-address-icon"
-                  className="block w-full ps-10 p-2.5 text-sm  text-white bg-[#364153] rounded-lg  border-gray-600 placeholder-gray-400"
+                  required
+                  className="block w-full ps-10 p-2.5 text-sm text-white bg-[#364153] rounded-lg border-gray-600 placeholder-gray-400"
                   placeholder="example123@gmail.com"
                 />
               </div>
             </div>
 
+            {/* MESSAGE FIELD */}
             <div className="message-container mb-5">
               <label
-                for="message"
-                className="block mb-2 text-sm font-medium
-              cursor-pointer text-gray-900 dark:text-white"
+                htmlFor="message"
+                className="block mb-2 text-sm font-medium cursor-pointer text-gray-900 dark:text-white"
               >
                 Your message
               </label>
@@ -105,10 +119,13 @@ export default function Contact({ isDarkMode }) {
                 id="message"
                 name="message"
                 rows="5"
-                className="block p-3 w-full text-sm  text-white bg-[#364153] rounded-lg  border-gray-600 placeholder-gray-400"
+                required
+                className="block p-3 w-full text-sm text-white bg-[#364153] rounded-lg border-gray-600 placeholder-gray-400"
                 placeholder="Leave a comment..."
               ></textarea>
             </div>
+
+            {/* SUBMIT BUTTON */}
             <div className="button-container mt-7 mb-0 h-10">
               <button
                 type="submit"
@@ -117,6 +134,13 @@ export default function Contact({ isDarkMode }) {
                 Send
               </button>
             </div>
+          </form>
+
+          {/* Hidden dummy form (for Netlify build detection) */}
+          <form name="contactMe" data-netlify="true" hidden>
+            <input type="text" name="name" />
+            <input type="email" name="email" />
+            <textarea name="message"></textarea>
           </form>
         </div>
       </div>
