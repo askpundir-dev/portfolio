@@ -4,7 +4,7 @@ import LightModeIcon from "../assets/icons/sun.svg?react";
 // import PhoneIcon from "../assets/icons/phone.svg?react";
 // import WhatsAppIcon from "../assets/icons/whatsapp.svg?react";
 import EmailLogo from "../assets/icons/email.svg?react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "./Header.css";
 
 export default function Header({ isDarkMode, setIsDarkMode,mailLink}) {

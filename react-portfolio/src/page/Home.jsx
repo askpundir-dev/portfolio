@@ -3,7 +3,8 @@ import { useDaRkModeContext } from "../context-provider/context";
 import Header from "../components/Header";
 import HeroSection from "./HeroSection";
 import ProjectSection from "./ProjectSection";
-import Footer from "../components/Footer";
+import Contact from "./Contact";
+import Footer from '../components/Footer';
 import "./Home.css";
 
 //Home.jsx
@@ -30,8 +31,14 @@ export default function Home() {
 
       <hr className={`${isDarkMode ? "text-gray-700" : "text-gray-400"}`} />
       <ProjectSection isDarkMode={isDarkMode} />
-      <hr className={`${isDarkMode ? "text-gray-700" : "text-gray-400"}`} />
-      <Footer />
+      <hr
+        className={`my-5 ${isDarkMode ? "text-gray-700" : "text-gray-400"}`}
+      />
+      <Contact isDarkMode={isDarkMode} />
+     <hr
+        className={`my-5 ${isDarkMode ? "text-gray-700" : "text-gray-400"}`}
+      />
+      <Footer mailLink={mailLink} isDarkMode={isDarkMode} />
     </>
   );
 }
