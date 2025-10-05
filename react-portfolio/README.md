@@ -1,12 +1,59 @@
-# React + Vite
+# 🌐 Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **modern, responsive, and interactive portfolio website** built using **React** and **Tailwind CSS**, designed to showcase my projects, skills, and experience in a visually appealing way.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
 
-## Expanding the ESLint configuration
+🔗 [https://react-portfolio-ask.netlify.app/](https://react-portfolio-ask.netlify.app/)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📌 Features
+
+- 🎨 **Responsive Design** – Fully optimized for desktop, tablet, and mobile.
+- 🌗 **Dark / Light Mode** toggle with smooth transitions.
+- 🧠 **About Me** section highlighting my journey, skills, and goals.
+- 💼 **Project Showcase** displaying my key development projects with live demos.
+- 📬 **Contact Section** with form and social media links.
+- ⚡ **Smooth animations and transitions** for a professional user experience.
+- 🚀 **Deployed on Netlify** for fast, reliable hosting.
+
+---
+
+## 🛠️ Tech Stack
+
+- **React.js** – Component-based frontend framework
+- **Tailwind CSS** – Utility-first styling and responsive design
+- **JavaScript (ES6+)** – Core logic and interactivity
+- **Vite** – Lightning-fast development environment
+- **Netlify** – Deployment and hosting platform
+
+---
+
+## 📸 Project Screenshots
+
+### 🏠 Homepage/Hero-Section
+
+<img src="screenshots/hero-section.png" alt="Hero Section" width="600"/>
+
+### 💼 Projects Section
+
+<img src="screenshots/projects-section.png" alt="Projects Section" width="600"/>
+
+### 💼 Contact Section
+
+<img src="screenshots/contact-section.png" alt="Contact Section" width="600"/>
+
+### 💻 About
+
+<img src="screenshots/about.png" alt="about me" width="600"/>
+
+### 🌗 Dark Mode
+
+<img src="screenshots/hero-section.png" alt="Dark Mode" width="600"/>
+
+### ☀️ Light Mode
+
+<img src="screenshots/light-mode.png" alt="Light Mode" width="600"/>
