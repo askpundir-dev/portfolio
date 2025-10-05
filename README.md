@@ -34,6 +34,8 @@ A **modern, responsive, and interactive portfolio website** built using **React*
 
 ## 📸 Project Screenshots
 
+---
+
 ### 🏠 Homepage/Hero-Section
 
 <img src="screenshots/hero-section.png" alt="Hero Section" width="600"/>
@@ -49,6 +51,10 @@ A **modern, responsive, and interactive portfolio website** built using **React*
 ### 💻 About
 
 <img src="screenshots/about.png" alt="about me" width="600"/>
+
+### Footer
+
+<img src="screenshots/footer.png" alt="about me" width="600"/>
 
 ### 🌗 Dark Mode
 
