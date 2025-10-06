@@ -8,6 +8,8 @@ export default function Popup({
   onClose,
   isDarkMode,
   mailLink,
+  githubLink,
+  linkedinLink,
   LinkedInLogo,
   GitHubLogo,
   EmailLogo,
@@ -199,7 +201,7 @@ export default function Popup({
               >
                 <li title="linkedin">
                   <a
-                    href="https://www.linkedin.com/in/abhishek-pundir-366761383/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                    href={linkedinLink}
                     target="_blank"
                     rel="noreferrer noopener"
                   >
@@ -216,7 +218,7 @@ export default function Popup({
                 </li>
                 <li title="github">
                   <a
-                    href="https://github.com/askpundir-dev"
+                    href={githubLink}
                     target="_blank"
                     rel="noreferrer noopener"
                   >

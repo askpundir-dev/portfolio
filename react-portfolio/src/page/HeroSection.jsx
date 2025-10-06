@@ -14,6 +14,8 @@ export default function HeroSection({
   setShowPopup,
   isDarkMode,
   mailLink,
+  githubLink,
+  linkedinLink,
 }) {
   useEffect(() => {
     // this runs the animation
@@ -65,7 +67,7 @@ export default function HeroSection({
         >
           <li title="linkedin">
             <a
-              href="https://www.linkedin.com/in/abhishek-pundir-366761383/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              href={linkedinLink}
               target="_blank"
               rel="noreferrer noopener"
             >
@@ -78,7 +80,7 @@ export default function HeroSection({
           </li>
           <li title="github">
             <a
-              href="https://github.com/askpundir-dev"
+              href={githubLink}
               target="_blank"
               rel="noreferrer noopener"
             >
@@ -131,6 +133,8 @@ export default function HeroSection({
           onClose={() => setShowPopup(false)}
           isDarkMode={isDarkMode}
           mailLink={mailLink}
+          githubLink={githubLink}
+          linkedinLink={linkedinLink}
           LinkedInLogo={LinkedInLogo}
           GitHubLogo={GitHubLogo}
           EmailLogo={EmailLogo}

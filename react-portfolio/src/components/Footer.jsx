@@ -2,7 +2,12 @@ import NameLogo from "../assets/images/name-logo-white.svg?react";
 import LinkedInLogo from "../assets/icons/linkedin.svg?react";
 import GitHubLogo from "../assets/icons/github.svg?react";
 import EmailLogo from "../assets/icons/email.svg?react";
-export default function Footer({ isDarkMode, mailLink }) {
+export default function Footer({
+  isDarkMode,
+  mailLink,
+  linkedinLink,
+  githubLink,
+}) {
   const year = new Date().getFullYear();
   console.log(year);
 
@@ -25,7 +30,7 @@ export default function Footer({ isDarkMode, mailLink }) {
       >
         <li title="linkedin">
           <a
-            href="https://www.linkedin.com/in/abhishek-pundir-366761383/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            href={linkedinLink}
             target="_blank"
             rel="noreferrer noopener"
           >
@@ -40,7 +45,7 @@ export default function Footer({ isDarkMode, mailLink }) {
         </li>
         <li title="github">
           <a
-            href="https://github.com/askpundir-dev"
+            href={githubLink}
             target="_blank"
             rel="noreferrer noopener"
           >
