@@ -3,6 +3,7 @@ import projects from "../data/projects";
 import "./ProjectSection.css";
 
 export default function ProjectSection({ isDarkMode }) {
+  const gitHubAllRepoLink = "https://github.com/askpundir-dev?tab=repositories";
   return (
     <section
       className={`project-section flex flex-col items-center py-8 gap-10 md:gap-14 ${
@@ -11,7 +12,7 @@ export default function ProjectSection({ isDarkMode }) {
     >
       <a
         style={{ textDecoration: "none" }}
-        href="https://github.com/askpundir-dev?tab=repositories"
+        href={gitHubAllRepoLink}
         target="_blank"
         rel="noopener noreferrer"
       >
