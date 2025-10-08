@@ -20,6 +20,9 @@ export default function Popup({
   if (!popupRef || !backdropRef) return;
 
   const handleClose = () => {
+    //reset overflow to auto
+    document.body.style.overflow = "auto";
+
     // trigger closing animation
     popupRef.current.classList.add("popupClosingEffect");
     backdropRef.current.classList.add("backdropClosingEffect");

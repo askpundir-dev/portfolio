@@ -64,6 +64,7 @@ export default function HeroSection({
             <button
               className="topSectionBtn pointer-events-auto"
               onClick={() => {
+                document.body.style.overflow='hidden';
                 setShowPopup(true);
               }}
             >
