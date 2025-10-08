@@ -16,3 +16,19 @@
   transform: translateX(0);
   opacity: 1;
 }
+
+@media (orientation: landscape) and (max-height: 450px) {
+  .hero-section .name-logo-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+  }
+  .hero-section #wrapper-canvas {
+    display: none;
+  }
+  .hero-section .latest-works-btn{
+    margin-top: -2.5rem;
+  }
+}

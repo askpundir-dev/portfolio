@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { DarkModeContext } from "./context";
 
-export default function AppContextProvider({ children }) {
-  return <DarkModeContextProvider>{children}</DarkModeContextProvider>;
+export default function AppProvider({ children }) {
+  return <DarkModeProvider>{children}</DarkModeProvider>;
 }
 
-function DarkModeContextProvider({ children }) {
+function DarkModeProvider({ children }) {
 
   const [isDarkMode, setIsDarkMode] = useState(() => {
     const saved = localStorage.getItem("darkMode");

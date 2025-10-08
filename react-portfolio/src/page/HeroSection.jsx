@@ -7,7 +7,7 @@ import HeroSectionSvg from "./HeroSectionSvg";
 import ScrollDownIcon from "../assets/icons/scroll-down.svg?react";
 import Popup from "./Popup";
 import { initMatter } from "../animation/matter";
-import scrollTopImage from '../assets/icons/scroll-top.svg'
+import scrollTopImage from "../assets/icons/scroll-top.svg";
 import "./HeroSection.css";
 export default function HeroSection({
   showPopup,
@@ -31,6 +31,19 @@ export default function HeroSection({
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handelLatestWorks = () => {
+    const target = document.querySelector(".project-heading");
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+    const scrollTopButton = document.querySelector(".scroll-back-to-top");
+    if (scrollTopButton) scrollTopButton.classList.add("scroll-top-active");
+  };
+
+  const handelScrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <section className="hero-section h-[90%]">
@@ -58,7 +71,9 @@ export default function HeroSection({
             </button>
           </div>
           {/* <NameLogo style={{ width: "100%", height: "auto" }} /> */}
-          <HeroSectionSvg />
+          <div className="name-logo-container w-full">
+            <HeroSectionSvg />
+          </div>
         </div>
         <ul
           className={`flex flex-col gap-5 z-10 pointer-events-auto ${
@@ -66,11 +81,7 @@ export default function HeroSection({
           }`}
         >
           <li title="linkedin">
-            <a
-              href={linkedinLink}
-              target="_blank"
-              rel="noreferrer noopener"
-            >
+            <a href={linkedinLink} target="_blank" rel="noreferrer noopener">
               <LinkedInLogo
                 className={`rightSectionIcons ${
                   isDarkMode ? "hover:text-pink-700" : "hover:text-orange-500"
@@ -79,11 +90,7 @@ export default function HeroSection({
             </a>
           </li>
           <li title="github">
-            <a
-              href={githubLink}
-              target="_blank"
-              rel="noreferrer noopener"
-            >
+            <a href={githubLink} target="_blank" rel="noreferrer noopener">
               <GitHubLogo
                 className={`rightSectionIcons ${
                   isDarkMode ? "hover:text-pink-700" : "hover:text-orange-500"
@@ -105,19 +112,9 @@ export default function HeroSection({
 
       <div className="w-full h-[10%]">
         <button
-          className="topSectionBtn mx-auto -mt-6 block relative group"
-          onClick={(e) => {
-            e.preventDefault();
-            const target = document.querySelector(".project-heading");
-            if (target) {
-              target.scrollIntoView({ behavior: "smooth" });
-            }
-            const scrollTopButton = document.querySelector(
-              ".scroll-back-to-top"
-            );
-            if (scrollTopButton)
-              scrollTopButton.classList.add("scroll-top-active");
-          }}
+          type="button"
+          className="topSectionBtn latest-works-btn mx-auto -mt-6 block relative group"
+          onClick={handelLatestWorks}
         >
           Latest Works
           <ScrollDownIcon
@@ -141,12 +138,10 @@ export default function HeroSection({
         />
       )}
 
-      {/* scroll to tp button */}
+      {/* scroll to top button */}
       <button
         title="scroll to top"
-        onClick={() => {
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        }}
+        onClick={handelScrollToTop}
         className="scroll-back-to-top"
       >
         <img src={scrollTopImage} alt="scroll to top" />
