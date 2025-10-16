@@ -64,7 +64,7 @@ export default function HeroSection({
             <button
               className="topSectionBtn pointer-events-auto"
               onClick={() => {
-                document.body.style.overflow='hidden';
+                document.body.style.overflow = "hidden";
                 setShowPopup(true);
               }}
             >
@@ -117,7 +117,7 @@ export default function HeroSection({
           className="topSectionBtn latest-works-btn mx-auto -mt-6 block relative group"
           onClick={handelLatestWorks}
         >
-          Latest Works
+          More Works
           <ScrollDownIcon
             className={`absolute top-9 left-2/6 w-10 group-hover:translate-y-2 transition-all duration-320 ease-in-out  ${
               isDarkMode ? "text-white" : "text-black"
