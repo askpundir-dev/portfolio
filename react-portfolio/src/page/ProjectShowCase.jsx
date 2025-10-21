@@ -40,7 +40,12 @@ export default function ProjectShowCase({ index, project, isDarkMode }) {
                   !isDarkMode ? "invert" : ""
                 }`}
               >
-                <img className="w-7" src={scrollLeftImage} alt="scroll left" />
+                <img
+                  className="w-7"
+                  src={scrollLeftImage}
+                  alt="scroll left"
+                  loading="lazy"
+                />
               </button>
               <button
                 title="scroll next"
@@ -53,6 +58,7 @@ export default function ProjectShowCase({ index, project, isDarkMode }) {
                   className="w-7"
                   src={scrollRightImage}
                   alt="scroll right"
+                  loading="lazy"
                 />
               </button>
             </>
@@ -63,6 +69,7 @@ export default function ProjectShowCase({ index, project, isDarkMode }) {
             className="mack-book max-w-full max-h-full relative z-10"
             src={mackBookImage}
             alt="mack book"
+            loading="lazy"
           />
 
           {/* --- Screen Content --- */}
@@ -82,6 +89,7 @@ export default function ProjectShowCase({ index, project, isDarkMode }) {
               }`}
               src={img.src}
               alt={img.alt}
+              loading="lazy"
             />
           ))}
 
