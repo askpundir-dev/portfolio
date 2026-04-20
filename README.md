@@ -6,7 +6,7 @@ A **modern, responsive, and interactive portfolio website** built using **React*
 
 ## 🚀 Live Demo
 
-🔗 [https://react-portfolio-ask.netlify.app/](https://react-portfolio-ask.netlify.app/)
+🔗 [Portfolio Live Link](https://react-portfolio-ask.netlify.app/)
 
 ---
 

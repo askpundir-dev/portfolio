@@ -45,9 +45,9 @@ export default function Popup({
       >
         <div
           ref={popupRef}
-          className={`popup flex flex-col fixed w-[92vw] h-[90dvh] md:h-[90vh] max-h-[1100px] max-w-[1200px] top-2/4 left-2/4 rounded-[7px] px-3 py-2.5 popupEffects border gap-4 ${
+          className={`popup flex flex-col fixed w-[94vw] h-[92dvh] md:w-[86vw] md:h-[90vh] lg:w-[78vw] xl:w-[72vw] max-h-[1100px] max-w-[1000px] top-2/4 left-2/4 rounded-[10px] px-4 py-3 md:px-7 md:py-5 popupEffects border gap-4 ${
             isDarkMode ? "dark" : "light"
-          } md:pl-12 lg:pl-15 xl:pl-18`}
+          }`}
         >
           <div className="popup-button-container flex justify-end gap-x-4">
             {" "}
@@ -74,10 +74,10 @@ export default function Popup({
             </button>
           </div>
 
-          <div className="popup-content-container flex h-[92%] flex-wrap gap-y-3.5 overflow-y-auto px-2 pt-0 md:flex-nowrap md:p-0">
-            <div className="w-[100%] h-[60%] order-2 md:w-[45%] md:h-auto md:order-0">
+          <div className="popup-content-container flex h-[92%] flex-wrap gap-8 overflow-y-auto px-1 pt-0 md:flex-nowrap md:items-start md:gap-10 md:px-0">
+            <div className="w-full order-2 md:w-1/2 md:order-0">
               <h2 className="popupHeadingStyles m-0">ABOUT ME</h2>
-              <p>
+              <p className="max-w-[58ch] leading-8 text-[1rem] md:text-[1.02rem]">
                 My name is{" "}
                 <strong>
                   <mark>Abhishek Pundir</mark>
@@ -119,7 +119,7 @@ export default function Popup({
 
               <h2 className="popupHeadingStyles">SKILLS and TOOLS</h2>
               <ul
-                className={`flex flex-wrap gap-4 pl-[2px] mt-4 text-[0.9rem]  lg:w-[50%] ${
+                className={`skillsGrid mt-4 text-[0.9rem] ${
                   isDarkMode ? "text-gray-400" : ""
                 }`}
               >
@@ -130,7 +130,7 @@ export default function Popup({
                       : "skillStylesLIghtMode"
                   }`}
                 >
-                  &#35;html
+                  &#35;HTML
                 </li>
                 <li
                   className={`skillStyles ${
@@ -139,7 +139,7 @@ export default function Popup({
                       : "skillStylesLIghtMode"
                   }`}
                 >
-                  &#35;css
+                  &#35;CSS
                 </li>
                 <li
                   className={`skillStyles ${
@@ -148,7 +148,7 @@ export default function Popup({
                       : "skillStylesLIghtMode"
                   }`}
                 >
-                  &#35;javascript
+                  &#35;JavaScript
                 </li>
                 <li
                   className={`skillStyles ${
@@ -157,7 +157,7 @@ export default function Popup({
                       : "skillStylesLIghtMode"
                   }`}
                 >
-                  &#35;react.js
+                  &#35;React.js
                 </li>
                 <li
                   className={`skillStyles ${
@@ -166,7 +166,7 @@ export default function Popup({
                       : "skillStylesLIghtMode"
                   }`}
                 >
-                  &#35;tailwind
+                  &#35;Tailwind CSS
                 </li>
                 <li
                   className={`skillStyles ${
@@ -175,7 +175,7 @@ export default function Popup({
                       : "skillStylesLIghtMode"
                   }`}
                 >
-                  &#35;git
+                  &#35;Git
                 </li>
                 <li
                   className={`skillStyles ${
@@ -184,7 +184,7 @@ export default function Popup({
                       : "skillStylesLIghtMode"
                   }`}
                 >
-                  &#35;github
+                  &#35;GitHub
                 </li>
                 <li
                   className={`skillStyles ${
@@ -193,12 +193,66 @@ export default function Popup({
                       : "skillStylesLIghtMode"
                   }`}
                 >
-                  &#35;vscode
+                  &#35;VS Code
+                </li>
+                <li
+                  className={`skillStyles ${
+                    isDarkMode
+                      ? "text-gray-400 hover:text-white"
+                      : "skillStylesLIghtMode"
+                  }`}
+                >
+                  &#35;Next.js
+                </li>
+                <li
+                  className={`skillStyles ${
+                    isDarkMode
+                      ? "text-gray-400 hover:text-white"
+                      : "skillStylesLIghtMode"
+                  }`}
+                >
+                  &#35;Postman
+                </li>
+                <li
+                  className={`skillStyles ${
+                    isDarkMode
+                      ? "text-gray-400 hover:text-white"
+                      : "skillStylesLIghtMode"
+                  }`}
+                >
+                  &#35;Node.js
+                </li>
+                <li
+                  className={`skillStyles ${
+                    isDarkMode
+                      ? "text-gray-400 hover:text-white"
+                      : "skillStylesLIghtMode"
+                  }`}
+                >
+                  &#35;Express.js
+                </li>
+                <li
+                  className={`skillStyles ${
+                    isDarkMode
+                      ? "text-gray-400 hover:text-white"
+                      : "skillStylesLIghtMode"
+                  }`}
+                >
+                  &#35;MySQL
+                </li>
+                <li
+                  className={`skillStyles ${
+                    isDarkMode
+                      ? "text-gray-400 hover:text-white"
+                      : "skillStylesLIghtMode"
+                  }`}
+                >
+                  &#35;MySQL Workbench
                 </li>
               </ul>
               <h2 className="popupHeadingStyles">SOCIAL-MEDIA and CONTACT</h2>
               <ul
-                className={`flex items-baseline gap-x-4 px-3 pb-5 ${
+                className={`flex items-baseline gap-x-4 px-1 pb-3 ${
                   isDarkMode ? "text-white" : "text-gray-700"
                 }`}
               >
@@ -251,8 +305,8 @@ export default function Popup({
                 </li>
               </ul>
             </div>
-            <div className="w-[100%] h-[40%] order-1  md:w-[55%] md:h-auto md:order-0">
-              <ProfileLogo className="max-w-full max-h-full" />
+            <div className="popup-illustration-wrap w-full order-1 md:w-1/2 md:order-0 flex items-center justify-center pt-1 md:pt-6">
+              <ProfileLogo className="popup-illustration w-full h-auto" />
             </div>
           </div>
         </div>

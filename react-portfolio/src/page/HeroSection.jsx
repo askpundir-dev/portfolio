@@ -59,7 +59,7 @@ export default function HeroSection({
               Abhishek Pundir
             </h1>
             <p className="job-title-para text-[1.05rem]">
-              <i>Front-End Developer</i>
+              <i>Full Stack Developer</i>
             </p>
             <button
               className="topSectionBtn pointer-events-auto"
